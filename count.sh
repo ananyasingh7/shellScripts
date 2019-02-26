@@ -5,11 +5,9 @@
 
 cd $1 
 
-counter = 0
-for value in $1/*
+for file in $1/*
 do    
-    counter=$((counter + 1))
-    fileList[counter] = value
-    echo $fileList[$counter]
+    filename="${file##*/}"
+    echo $filename
 done
 
